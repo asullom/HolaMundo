@@ -20,7 +20,7 @@ public class HolaMundo {
           System.out.println("Hola Mundo Lima");       
         // TODO code application logic here
         System.out.println("Hola Mundo Java");
-        System.out.println("Omar Loaiza colaboró esta línea de código");
+        System.out.println("Omar Loaiza colaboró esta línea de código..............");
     }
     
 }
