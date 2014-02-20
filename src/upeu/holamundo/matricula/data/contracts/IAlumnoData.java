@@ -15,6 +15,7 @@ import upeu.holamundo.matricula.data.entities.Alumno;
  */
 public interface IAlumnoData {
     
+    //ORM vendors o particular 
     Alumno create(Alumno alumno);
     Alumno edit(Alumno alumno);
     void delete(int id);
