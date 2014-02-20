@@ -6,10 +6,45 @@
 
 package upeu.holamundo.matricula.data.pgcontexts;
 
+import java.util.List;
+import upeu.holamundo.matricula.data.contracts.IAlumnoData;
+import upeu.holamundo.matricula.data.entities.Alumno;
+
 /**
  *
  * @author Asullom
  */
-public class AlumnoData {
+public class AlumnoData implements IAlumnoData{
+
+    @Override
+    public Alumno create(Alumno alumno) {//TODO: falta que guarde en la posgresql
+        System.out.println("en pg");
+        return alumno;
+    }
+
+    @Override
+    public Alumno edit(Alumno alumno) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void delete(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Alumno getById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Alumno> getListAll() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Alumno> getListByFilter(String filter) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
