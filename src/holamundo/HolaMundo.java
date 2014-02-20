@@ -20,6 +20,7 @@ public class HolaMundo {
         System.out.println("Hola Mundo Java");
         //Hola soy Angel
         System.err.println("Hola Mundo, soy Alex");
+        System.err.println("este sabado ayunen!!!! ");
         
     }
     
