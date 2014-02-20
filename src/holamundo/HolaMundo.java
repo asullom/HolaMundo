@@ -19,6 +19,8 @@ public class HolaMundo {
         // TODO code application logic here
         System.out.println("Hola Mundo Java");
         //Hola soy Angel
+        System.err.println("Hola Mundo, soy Alex");
+        
     }
     
 }
