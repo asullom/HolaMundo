@@ -24,6 +24,9 @@ public class HolaMundo {
         //Hola soy Angel
         //Antonieta
         System.out.println("Antonieta de las Nieves");
+        //David Reyna
+        System.out.println("Trabajaremos hoy en nuestros proyectos de forma colaborativa");
+        //
         System.out.println("Hola Mundo, soy Alex");
         System.out.println("Me parece genial!!!");       
 
