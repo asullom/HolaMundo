@@ -5,6 +5,7 @@
  */
 package upeu.holamundo.matricula.business;
 
+import upeu.holamundo.exceptions.AlumnoCannotBeNullException;
 import upeu.holamundo.matricula.data.contracts.DataFactory;
 import upeu.holamundo.matricula.data.contracts.IAlumnoData;
 import upeu.holamundo.matricula.data.entities.Alumno;
@@ -24,11 +25,15 @@ public class AlumnoBusiness {
     }
 
     public Alumno create(Alumno alumno) throws Exception {
+        if (alumno==null) {
+            throw new AlumnoCannotBeNullException();
+        }
+        
         //No repertir codigo
         if (alumno.getCodigo().equals("A001")) {
             throw new AlumnoCodigoAlreadyInUseException(alumno.getCodigo());
         }
-        //Permitir crear alumnos si el usuario es administrador 
+        //TODO Permitir crear alumnos si el usuario es administrador 
 
         return alumnoData.create(alumno);
     }
