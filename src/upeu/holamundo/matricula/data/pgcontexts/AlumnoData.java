@@ -18,6 +18,7 @@ public class AlumnoData implements IAlumnoData{
 
     @Override
     public Alumno create(Alumno alumno) {//TODO: falta que guarde en la posgresql
+        alumno.setId(1);//autogen
         System.out.println("en pg");
         return alumno;
     }

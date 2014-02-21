@@ -13,6 +13,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import upeu.holamundo.matricula.data.contracts.DataFactory;
+import upeu.holamundo.matricula.data.contracts.IAlumnoData;
 import upeu.holamundo.matricula.data.entities.Alumno;
 
 /**
@@ -21,7 +23,10 @@ import upeu.holamundo.matricula.data.entities.Alumno;
  */
 public class AlumnoDataTest {
     
+    IAlumnoData instance ;
+    
     public AlumnoDataTest() {
+        
     }
     
     @BeforeClass
@@ -34,6 +39,8 @@ public class AlumnoDataTest {
     
     @Before
     public void setUp() {
+        DataFactory.setInitializeFactory(DataFactory.PG);
+        instance = DataFactory.getAlumnoData();
     }
     
     @After
@@ -49,11 +56,8 @@ public class AlumnoDataTest {
         Alumno alumno = new Alumno();
         alumno.setCodigo("201419090");
         
-        AlumnoData instance = new AlumnoData();
-        
         Alumno result = instance.create(alumno);
         assertTrue(result.getId()>0);
-        
     }
 
     /**
@@ -129,3 +133,5 @@ public class AlumnoDataTest {
     }
     
 }
+
+

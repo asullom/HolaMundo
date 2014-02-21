@@ -19,6 +19,8 @@ public class AlumnoData implements IAlumnoData {//implements es para interfaces,
     @Override
     public Alumno create(Alumno alumno) { //TODO: falta que guarde en la mysql
         alumno.setId(1);//autogen
+        //insert into alumno(id, codigo) values(?,?)
+        
         System.out.println("en mysql");
         return alumno; 
     }
