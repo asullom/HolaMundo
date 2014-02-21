@@ -24,18 +24,7 @@ import upeu.holamundo.matricula.data.entities.Alumno;
 public class AlumnoDataTest {
     
     IAlumnoData instance ;
-    
-    public AlumnoDataTest() {
-        
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
+
     
     @Before
     public void setUp() {
@@ -54,9 +43,10 @@ public class AlumnoDataTest {
     public void testCreate() { //Hecho/Done
         System.out.println("create");
         Alumno alumno = new Alumno();
-        alumno.setCodigo("201419090");
+        alumno.setCodigo("A001");
         
         Alumno result = instance.create(alumno);
+        Alumno x = result;
         assertTrue(result.getId()>0);
     }
 
@@ -67,7 +57,7 @@ public class AlumnoDataTest {
     public void testEdit() {
         System.out.println("edit");
         Alumno alumno = null;
-        AlumnoData instance = new AlumnoData();
+        
         Alumno expResult = null;
         Alumno result = instance.edit(alumno);
         assertEquals(expResult, result);
@@ -82,7 +72,7 @@ public class AlumnoDataTest {
     public void testDelete() {
         System.out.println("delete");
         int id = 0;
-        AlumnoData instance = new AlumnoData();
+        
         instance.delete(id);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -95,7 +85,7 @@ public class AlumnoDataTest {
     public void testGetById() {
         System.out.println("getById");
         int id = 0;
-        AlumnoData instance = new AlumnoData();
+        
         Alumno expResult = null;
         Alumno result = instance.getById(id);
         assertEquals(expResult, result);
@@ -109,7 +99,7 @@ public class AlumnoDataTest {
     @Test
     public void testGetListAll() {
         System.out.println("getListAll");
-        AlumnoData instance = new AlumnoData();
+        
         List<Alumno> expResult = null;
         List<Alumno> result = instance.getListAll();
         assertEquals(expResult, result);
@@ -124,7 +114,7 @@ public class AlumnoDataTest {
     public void testGetListByFilter() {
         System.out.println("getListByFilter");
         String filter = "";
-        AlumnoData instance = new AlumnoData();
+        
         List<Alumno> expResult = null;
         List<Alumno> result = instance.getListByFilter(filter);
         assertEquals(expResult, result);

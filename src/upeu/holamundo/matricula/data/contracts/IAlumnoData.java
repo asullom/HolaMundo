@@ -14,7 +14,7 @@ import upeu.holamundo.matricula.data.entities.Alumno;
  * @author Asullom
  */
 public interface IAlumnoData {
-    
+                
     //ORM vendors o particular 
     Alumno create(Alumno alumno);
     Alumno edit(Alumno alumno);

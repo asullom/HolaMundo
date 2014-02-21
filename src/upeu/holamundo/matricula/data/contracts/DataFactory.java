@@ -19,11 +19,11 @@ public class DataFactory {
         DataFactory.initializeFactory = initializeFactory;
     }
 
-    public static IAlumnoData getAlumnoData() {
+     public static IAlumnoData getAlumnoData() {
         switch (DataFactory.initializeFactory) {
-            case 1:
+            case MY:
                 return new upeu.holamundo.matricula.data.mycontexts.AlumnoData(); //break;
-            case 2:
+            case PG:
                 return new upeu.holamundo.matricula.data.pgcontexts.AlumnoData(); //break;
             default:
                 return null;
